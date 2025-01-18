@@ -14,10 +14,16 @@ return new class extends Migration
         Schema::create('rekredensialings', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->integer('nik', 16);
+            $table->string('nik', 16);
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->text('alamat');
+            $table->string('str', 50);
+            $table->string('ijzah', 50);
+            $table->string('institusi');
+            $table->date('tgl_lulus');
+            $table->string('pendidikan');
+            $table->text('status_rekredensial');
             $table->timestamps();
         });
     }
