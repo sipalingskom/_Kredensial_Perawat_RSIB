@@ -23,8 +23,10 @@ return new class extends Migration
             $table->string('institusi');
             $table->date('tgl_lulus');
             $table->string('pendidikan');
-            $table->text('status_rekredensial');
+            $table->unsignedBigInteger('status_rekredensial_id');
             $table->timestamps();
+
+            $table->foreign('status_rekredensial_id')->references('id')->on('status_rekredensials')->onDelete('cascade');
         });
     }
 
