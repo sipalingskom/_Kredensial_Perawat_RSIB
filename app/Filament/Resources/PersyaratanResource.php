@@ -45,12 +45,13 @@ class PersyaratanResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('pertanyaan')
                     ->searchable()
+                    ->limit(70)
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->dateTime('M d, Y')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->dateTime('M d, Y')
                     ->sortable(),
             ])
             ->actions([

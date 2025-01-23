@@ -1,0 +1,2 @@
+
+php artisan icons:cache
